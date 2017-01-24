@@ -1,0 +1,47 @@
+{% from 'macros/helpers.html' import sprite %}
+<!doctype html>
+<html class="{{ html_class }}">
+
+<head>
+  <!-- Meta Tags -->
+  {% block meta %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
+
+  <!-- Page Title -->
+  <title>{% block title %}{{ page_name }} | {{ project_name }}{% endblock %}</title>
+
+  <!-- Favicons -->
+  <!-- Generate using http://realfavicongenerator.net/ -->
+
+  <!-- Stylesheets -->
+  {% block stylesheets %}
+  <!-- stylesheets:css -->
+  <!-- endinject -->
+  {% endblock %}
+
+  <!-- Javascript -->
+  {% block head_js %}
+  <!-- head:js -->
+  <!-- endinject -->
+
+  <!--[if lt IE 9]>
+  <!-- lt-ie-9:js -->
+  <!-- endinject -->
+  <!-- [endif] -->
+  {% endblock %}
+</head>
+
+<body class="{{ body_class }}">
+  {% block before_container %}{% endblock %}
+  {% block container%}{% endblock %}
+  {% block after_container %}
+  <!-- Footer Javascript -->
+  <!-- footer:js -->
+  <!-- endinject -->
+  {% endblock %}
+</body>
+
+</html>

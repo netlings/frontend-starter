@@ -1,0 +1,17 @@
+{
+  "name": "frontend-starter",
+  "description": "Frontend Starter Kit",
+  "main": "",
+  "authors": [
+    "Dipesh Batheja"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

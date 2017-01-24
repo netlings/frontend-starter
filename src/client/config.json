@@ -1,0 +1,20 @@
+{
+  "project_name": "ProjectTitle",
+
+  "assets": [
+    { "src": "src/client/stylesheets/bootstrap.scss", "inject": "stylesheets" },
+    { "src": "src/client/stylesheets/iconfont.scss", "inject": false },
+    { "src": "src/client/stylesheets/main.scss", "inject": "stylesheets" },
+
+    { "src": "src/client/javascript/head.core.js", "inject": "head" },
+
+    { "src": "node_modules/lt-ie-9/lt-ie-9.js", "inject": "lt-ie-9" },
+
+    { "src": "node_modules/jquery/dist/jquery.js", "inject": "footer" },
+    { "src": "node_modules/tether/dist/js/tether.js", "inject": "footer" },
+    { "src": "node_modules/bootstrap/dist/js/bootstrap.js", "inject": "footer" },
+    { "src": "node_modules/object-fit-images/dist/ofi.browser.js", "inject": "footer" },
+    { "src": "src/client/javascript/main.js", "inject": "footer" }
+  ]
+}
+

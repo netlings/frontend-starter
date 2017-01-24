@@ -1,0 +1,17 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.group {
+  @include clearfix();
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0px;
+}

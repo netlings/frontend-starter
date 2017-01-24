@@ -1,0 +1,89 @@
+/// Define complete collection of styles for a font family.
+///
+/// @param {String} $font-family - Name of the font.
+/// @param {String} $*-file-paths - File paths of thin, light, normal, medium, bold and ultra bold fonts.
+@mixin font-face-collection($font-family,
+ $thin-file-path,
+ $thin-italic-file-path,
+ $light-file-path,
+ $light-italic-file-path,
+ $normal-file-path,
+ $normal-italic-file-path,
+ $medium-file-path,
+ $medium-italic-file-path,
+ $bold-file-path,
+ $bold-italic-file-path,
+ $ultra-bold-file-path,
+ $ultra-bold-italic-file-path
+ ) {
+
+     @if ($thin-file-path != null) {
+         @include font-face($font-family, $thin-file-path, $font-weight: 100, $font-style: normal);
+     }
+
+     @if ($thin-italic-file-path != null) {
+         @include font-face($font-family, $thin-file-path, $font-weight: 100, $font-style: italic);
+     }
+
+     @if ($light-file-path != null) {
+         @include font-face($font-family, $light-file-path, $font-weight: 300, $font-style: normal);
+     }
+
+     @if ($light-italic-file-path != null) {
+         @include font-face($font-family, $light-italic-file-path, $font-weight: 300, $font-style: italic);
+     }
+
+     @if ($normal-file-path != null) {
+         @include font-face($font-family, $normal-file-path, $font-weight: normal, $font-style: normal);
+     }
+
+     @if ($normal-italic-file-path != null) {
+         @include font-face($font-family, $normal-italic-file-path, $font-weight: normal, $font-style: italic);
+     }
+
+      @if ($medium-file-path != null) {
+         @include font-face($font-family, $medium-file-path, $font-weight: 500, $font-style: normal);
+     }
+      @if ($medium-italic-file-path != null) {
+         @include font-face($font-family, $medium-italic-file-path, $font-weight: 500, $font-style: italic);
+     }
+      @if ($bold-file-path != null) {
+         @include font-face($font-family, $bold-file-path, $font-weight: 700, $font-style: normal);
+     }
+      @if ($bold-italic-file-path != null) {
+         @include font-face($font-family, $bold-italic-file-path, $font-weight: 700, $font-style: italic);
+     }
+      @if ($ultra-bold-file-path != null) {
+         @include font-face($font-family, $ultra-bold-file-path, $font-weight: 900, $font-style: normal);
+     }
+      @if ($ultra-bold-italic-file-path != null) {
+         @include font-face($font-family, $ultra-bold-file-path, $font-weight: 900, $font-style: italic);
+     }
+}
+
+/// Based on http://codepen.io/javasteve99/pen/hDxpn . Easy way to create @font-face definations
+///
+/// @param {String} $font-family - Name of the font.
+/// @param {String} $file-path - Path relative to 'fonts' directory, without extension.
+/// @param {Keyword} $font-weight [normal] - Weight of the font.
+/// @param {Keyword} $font-style [normal] - Style of the font.
+@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+      src: url('../fonts/#{$file-path}.eot');
+      src: url('../fonts/#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/#{$file-path}.woff') format('woff'),
+           url('../fonts/#{$file-path}.ttf') format('truetype'),
+           url('../fonts/#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+        src: url('../fonts/#{$file-path}.svg##{$font-family}') format('svg');
+    }
+  }
+}
