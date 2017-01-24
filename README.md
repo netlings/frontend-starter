@@ -1,6 +1,7 @@
-# Multi-Device+ SASS Framework
+# Frontend Starter
 
-Multi-Device+ SASS Framework is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site or app structure. 
+Frontend Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It is boilerplate and especially useful in PSD to HTML workflow for frontend development.
+
 
 Features | Tools Used
 ------ | -----
@@ -59,7 +60,7 @@ If you plan on using this framework to start a new project, be sure and clear ou
 ```bash
 rm -rf .git && git init
 git add --all
-git commit -m "Initialized with Multi Device+ SASS Framework"
+git commit -m "Initialized with Frontend Starter"
 ```
 
 #### Install node dependencies
