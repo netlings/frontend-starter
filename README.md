@@ -1,12 +1,12 @@
 # Frontend Starter
 
-Frontend Starter is a delicious blend of tasks and build tools poured into [Gulp](http://gulpjs.com/) to form a full-featured modern asset pipeline. It is boilerplate and especially useful in PSD to HTML workflow for frontend development.
+Frontend Starter is a boilerplate that help you get started with your frontend projects leveraging modern frontend development workflows and technologies.
 
-
+## Features
 Features | Tools Used
 ------ | -----
-**CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps, [Rucksack](https://simplaio.github.io/rucksack/)
-**JavaScript** | Folder to keep all your custom Javscript. As well as Gulp tasks to export JS from node modules and/or Bower.
+**CSS** | [Sass](http://sass-lang.com/) ([Libsass](http://sass-lang.com/libsass) via [node-sass](https://github.com/sass/node-sass)), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps, [Rucksack](https://simplaio.github.io/rucksack/), Postcss
+**JavaScript** | Folder to keep all your custom Javscript, managed and injected into HTML page using simple JSON configuraition file.
 **HTML** | [Nunjucks](https://mozilla.github.io/nunjucks/), [gulp-data](https://github.com/colynb/gulp-data), [gulp-prettify] (https://www.npmjs.com/package/gulp-prettify)
 **Images** | Compression with [imagemin](https://www.npmjs.com/package/gulp-imagemin)
 **Icons** | Auto-generated [SVG Sprites](https://github.com/w0rm/gulp-svgstore) and/or [Icon Fonts](https://www.npmjs.com/package/gulp-iconfont)
@@ -20,16 +20,21 @@ Features | Tools Used
 
 ### Windows 10
 Make sure following tool are installed already in your system, or you can download the installers from the links provided and run a basic setup:
+
 1. Git, GitBash 
     - https://git-scm.com/download/win
+    
 2. NodeJS 
     - https://nodejs.org/en/download/
+    
 3. Python (v2.7 recommended, v3.x.x is not supported)
     - https://www.python.org/ftp/python/2.7.12/python-2.7.12.amd64.msi
     - Make sure to select, Add Paython.exe in the PATH during setup.
+    
 4. Visual Studio 2015 - Community Edition
     - Select Custom Install
     - Select Visual C++ in programming languages
+    
 
 ### Mac OS X
 1. Git (already installed on Mac OS X)
@@ -39,24 +44,22 @@ Make sure following tool are installed already in your system, or you can downlo
 4. Xcode
     - You also need to install the Command Line Tools via Xcode. You can find this under the menu Xcode -> Preferences -> Downloads. This step will install gcc and the related toolchain containing make
 
-### All Platforms
+### Install global dependencies
 Install global dependencies with following command through your terminal window once all above tools are installed.
 
 ```bash
-npm install --global gulp-cli && npm install --global typings && npm install --global typescript
+npm install --global gulp-cli && npm install --global typings && npm install --global typescript && npm install --global yarn
 ```
 
-## Getting started
+## Start a new project
 Open Terminal window to run following commands:
-
-#### Clone repository
 ```bash
 git clone git@gitlab.netlingshq.com:root/sass-framework.git new-project
 cd new-project
 ```
 
 #### Clear out `git` data
-If you plan on using this framework to start a new project, be sure and clear out the `git` data to start a fresh history:
+Be sure and clear out the `git` data to start a fresh history for your new project:
 ```bash
 rm -rf .git && git init
 git add --all
@@ -65,8 +68,9 @@ git commit -m "Initialized with Frontend Starter"
 
 #### Install node dependencies
 ```bash
-npm install
+yarn
 ```
+
 ## Usage 
 ### Run server in development mode:
 ```
